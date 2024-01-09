@@ -1,0 +1,187 @@
+<?php 
+session_start();
+$con=mysqli_connect("localhost","root","","tourbooking");
+if(isset($_POST['submit']))
+{
+$name=$_POST['name'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+$address=$_POST['address'];
+$whereto=$_POST['whereto'];
+$arrival=$_POST['arrival'];
+$leave=$_POST['leave'];
+$guest=$_POST['guest'];
+
+$query="INSERT INTO `booknow`(`name`, `email`, `phone`, `address`, `whereto`, `guest`, `arrival`, `leave`) VALUES ('$name','$email','$phone','$address','$whereto','$guest','$arrival','$leave')";
+
+$run=mysqli_query($con,$query);
+}
+?>
+
+<?php
+$email=$_SESSION['email'];
+if($email == true){ }
+
+else{
+    header('location:login.php');
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel-Tour Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="package.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bai+Jamjuree:wght@500&family=Cinzel:wght@500&family=Gruppo&family=Jost&family=Karla:wght@700&family=Maven+Pro&family=Merriweather+Sans:wght@700;800&family=Montserrat:wght@300&family=Noto+Sans&family=Nunito&family=Poppins:wght@400;500&family=Quicksand:wght@400;500&family=Rubik&family=Sedgwick+Ave+Display&family=Source+Code+Pro:wght@300;400&family=Suravaram&family=Varela+Round&display=swap"
+        rel="stylesheet">
+
+</head>
+<body>
+<section>
+        <nav class="navbar background h-nav-resp" id="#home">
+            <div class="name" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"><span
+                    style="color: #222;">Tra</span><span style="color: #8e44ad;">vel.</span></div>
+            <ul class="navlist v-class-resp">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="package.php">Package</a></li>
+                <li><a href="book.php">Book</a></li>
+            </ul>
+            <div class="rightnav v-class-resp">
+            <button class="btn1">BOOK NOW
+           
+                </button>
+            </div>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </section>
+    <div class="heading heading-about" style="background: url(image/book3.jpeg) no-repeat;">
+    <h1>Book Now</h1>
+    
+    </div>
+    <div class="booking ">
+        <h1 class="heading-title">Book Your Trip</h1>
+        <span id="erro"></span>
+        <form method="post" name="myForm" class="book-form" onsubmit="return validation();">
+            <div class="flex">
+           
+                <div class="inputbox">
+                    <span>name:</span>
+                    <input type="text"placeholder="enter your name"name="name" id="name">
+                </div>
+                <div class="inputbox">
+                    <span>email:</span>
+                    <input type="email"placeholder="enter your email"name="email" id="email">
+                </div>
+                <div class="inputbox">
+                    <span>phone:</span>
+                    <input type="number"placeholder="enter your mobile"name="phone" id="phone">
+                </div>
+                <div class="inputbox">
+                    <span>address:</span>
+                    <input type="text"placeholder="enter your address"name="address" id="add">
+                </div>
+                <div class="inputbox">
+                    <span>where to:</span>
+                    <input type="text"placeholder="place you want to visit"name="whereto" id="whereto">
+                </div>
+                <div class="inputbox">
+                    <span>guest:</span>
+                    <input type="number"placeholder="no of guest"name="guest" id="guest">
+                </div>
+                <div class="inputbox">
+                    <span>arrivals:</span>
+                    <input type="date"name="arrival" id="arrival">
+                </div>
+                <div class="inputbox">
+                    <span>leave:</span>
+                    <input type="date"name="leave" id="leave1">
+                </div>
+            </div>
+            <input type="submit" name="submit" value="submit" class="btn2">
+        </form>
+    </div>
+  <?php include('footer.php'); ?>
+</body>
+<script src="script.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    function validation() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var address = document.getElementById('add').value;
+        var phone = document.getElementById('phone').value;
+        var whereto = document.getElementById('whereto').value;
+        var guest = document.getElementById('guest').value;
+        var arrival = document.getElementById('arrival').value;
+        var leave1 = document.getElementById('leave1').value;
+        if (name == null || name == "") {
+            document.getElementById("erro").innerHTML = "*Please enter your name*";
+            return false;
+        }
+        if (email == null || email == "") {
+            document.getElementById("erro").innerHTML = "*Please enter your email*";
+            return false;
+        }
+        if (phone == null || phone == "") {
+            document.getElementById("erro").innerHTML = "*Please enter your phone*";
+            return false;
+        }
+        
+        if(address == null || address== "")
+        {
+            document.getElementById('add').style.border = "2px solid red";
+            document.getElementById("erro").innerHTML = "*Please enter your address*";
+            return false;
+        }
+    
+        if(whereto == null || whereto == "")
+        { 
+            document.getElementById("erro").innerHTML = "*Please enter your destination*";
+            return false;
+        }
+        
+        if(arrival == null || arrival== "")
+        {
+            
+            document.getElementById("erro").innerHTML = "*Please enter your arriving date*";
+            return false;
+        }
+        
+        if(leave1 == null || leave1 == "")
+        {   
+            document.getElementById("erro").innerHTML = "*Please enter your departure date*";
+            return false;
+        }
+    
+    }
+</script>
+<script>
+    if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
+</script>
+</html>

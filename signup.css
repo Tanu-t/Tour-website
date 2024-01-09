@@ -1,0 +1,150 @@
+body {
+	margin-top: 3%;
+}
+
+
+#form-container {
+	/* margin-left: 28%; */
+    margin: auto;
+	width: 600px;
+	height: fit-content;
+	background-color: none;
+	border: 1px #8e44ad solid;
+}
+#titile {
+	/* margin-left: 28%; */
+    margin: auto;
+ padding: 20px 25px;
+ padding-bottom:50px;
+	width: 602px;
+	height: 30px;
+	background-color: #8e44ad;
+}
+
+input[type="text"], input[type="password"],input[type="number"] {
+	width: 250px;
+	height: 50px;
+	margin-top: 30px;
+	margin-left: 3.50%;
+
+}
+
+input[type="submit"] {
+	width: 500px;
+	height: 30px;
+	background-color: #8e44ad;
+	color: white;
+	border: none;
+	margin-top: 10px;
+	margin-left: 50px;
+	cursor: pointer;
+
+}
+
+input[type="submit"]:hover {
+	background-color: #8e44ad;
+}
+
+fieldset{
+	width: 600px;
+	/* margin-left: 28%; */
+	height: 200px;
+	margin-top: 15%;
+}
+
+h4 {
+	color: white;
+	text-align: center;
+}
+
+#show-password {
+	margin-left: 130px;
+	font-family: sans-serif;
+    margin-top: 5%;
+  
+}
+
+span {
+	color: white;
+	background-color: #f34747c7;
+	border-bottom: 3px solid red;
+}
+
+input[type="checkbox"]{
+	cursor: pointer;
+}
+
+#password-message {
+	/* margin-left: 28%; */
+	width: 600px;
+	height: 200px;
+	background-color: solid;
+	border: 1px solid var(#8e44ad);
+	display: none;
+	margin-top: 1px;
+
+}
+
+.invalid {
+	color: red;
+}
+
+.invalid:before {
+	position: relative;
+	left: -35px;
+	content: "✖";
+}
+
+
+.valid {
+	color: green;
+}
+
+.valid:before {
+	position: relative;
+	left: -35px;
+	content: "✔";
+}
+
+h4 {
+	text-align: center;
+}
+
+p {
+	margin-left: 50px;
+}
+
+label {
+	color: gray;
+	font-style: bold;
+}
+
+#signup {
+	font-family: sans-serif;
+    
+   
+}
+#submit{
+margin: 5% auto;
+width: fit-content;
+padding-top: 10px;
+padding-bottom:30px;
+padding-left: 40px;
+padding-right: 40px;
+
+}
+
+a {
+	text-decoration-style: double;
+	text-decoration-line: unset;
+	text-rendering: auto;
+}
+
+input[type="checkbox"] {
+    margin-left: 7px;
+}
+.btn{
+
+    display: flex;
+    justify-content: center;
+}

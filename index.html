@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel-Tour Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="responsive.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bai+Jamjuree:wght@500&family=Cinzel:wght@500&family=Gruppo&family=Jost&family=Karla:wght@700&family=Maven+Pro&family=Merriweather+Sans:wght@700;800&family=Montserrat:wght@300&family=Noto+Sans&family=Nunito&family=Poppins:wght@400;500&family=Quicksand:wght@400;500&family=Rubik&family=Sedgwick+Ave+Display&family=Source+Code+Pro:wght@300;400&family=Suravaram&family=Varela+Round&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <section>
+        <nav class="navbar background h-nav-resp" id="#home">
+            <div class="name" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"><span
+                    style="color: #222;">Tra</span><span style="color: #8e44ad;">vel.</span></div>
+            <ul class="navlist v-class-resp">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="package.php">Package</a></li>
+                <li><a href="book.php">Book</a></li>
+            </ul>
+            <div class="rightnav v-class-resp">
+            <button class="btn1">Register
+                    <div class="profile">
+                        <a href="login.php" class="login php">Login</a>
+                        <a href="signup.php" class="signup php">Signup</a>
+                        <a href="logout.php" class="">logout</a>
+                    </div>
+                </button>
+            </div>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- home -->
+    <section class="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide" style="background: url(image/bg5.jpg) no-repeat;">
+                    <div class="content">
+                        <span>explore,discover,travel</span>
+                        <h3>travel around the world</h3>
+                        <a href="package.php" class="btn2">discover more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide" style="background: url(image/bg2.jpg) no-repeat;">
+                    <div class="content">
+                        <span>explore,discover,travel</span>
+                        <h3>discover the new place</h3>
+                        <a href="package.php" class="btn2">discover more</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide" style="background: url(image/bg1.jpg) no-repeat;">
+                    <div class="content">
+                        <span>explore,discover,travel</span>
+                        <h3>make your tour worthwhile</h3>
+                        <a href="package.php" class="btn2">discover more</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!-- home-end -->
+
+
+    <!-- services -->
+    <section class="services">
+        <h1 class="heading-title"> our services</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="image/icon1.png" alt="" height="100px">
+                <h3>adventure</h3>
+            </div>
+            <div class="box">
+                <img src="image/icon2.png" alt="" height="100px">
+                <h3>tour guide</h3>
+            </div>
+            <div class="box">
+                <img src="image/icon2.png" alt="" height="100px">
+                <h3>trakking</h3>
+            </div>
+            <div class="box">
+                <img src="image/icon2.png" alt="" height="100px">
+                <h3>camp fire</h3>
+            </div>
+            <div class="box">
+                <img src="image/icon2.png" alt="" height="100px">
+                <h3>off road</h3>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- service-end -->
+
+    <!-- home-about -->
+    <section class="home-about">
+        <div class="image">
+            <img src="image/about.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>about us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quo ipsam, eligendi atque amet rem
+                aliquam tempora consequatur eum officia fugit aliquid dolore, natus commodi sit! Velit ex accusamus
+                facilis.</p>
+            <a href="about.php" class="btn2">read more</a>
+        </div>
+    </section>
+    <!-- home-about-end -->
+
+    <!-- home package section start -->
+
+    <section class="home-package">
+        <h1 class="heading-title">our package</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="image/package1.webp" alt="">
+                </div>
+                <div class="content">
+                    <h3>adventure & tour</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, temporibus?</p>
+                    <a href="book.php" class="btn2">book now</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="image/package2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>adventure & tour</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, temporibus?</p>
+                    <a href="book.php" class="btn2">book now</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="image/package3.webp" alt="">
+                </div>
+                <div class="content">
+                    <h3>adventure & tour</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, temporibus?</p>
+                    <a href="book.php" class="btn2">book now</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="load-more"><a href="package.php" class="btn2">load more</a></div>
+    </section>
+    <!-- home package section end-->
+
+    <!-- home offer section start -->
+
+    <section class="home-offer">
+        <div class="content">
+
+            <h3>upto 50% off</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellendus quae nesciunt aspernatur
+                magnam voluptates eligendi, ut et aliquam. Itaque!</p>
+            <a href="book.php" class="btn2">book now</a>
+            
+        </div>
+    </section>
+
+
+    <!-- home offer section end -->
+
+
+    <?php include('footer.php'); ?>
+    
+    
+</body>
+<script src="script.js"></script>
+
+<script>
+    AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".home-slider", {
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+</html>
